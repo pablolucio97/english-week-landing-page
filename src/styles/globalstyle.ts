@@ -32,6 +32,10 @@ export const GlobalStyle = createGlobalStyle`
     a{
         text-decoration: none;
     }
+
+    p, span{
+      font-family: ${(props) => props.theme.fonts.secondary};
+    }
     
     .active-modal {
         display: flex;

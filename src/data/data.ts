@@ -76,11 +76,11 @@ export const testimonials = [
 export const faqData = [
   {
     title: "O acesso é vitalício?",
-    content: "Sim. O acesso ao treinamento é vitalício.",
+    content: "Sim. O acesso ao evento é vitalício.",
   },
   {
-    title: "De onde posso acessar o treinamento?",
-    content: "Você pode acessar o treinamento de qualquer dispositivo com conexão com a internet.",
+    title: "De onde posso acessar o evento?",
+    content: "Você pode acessar o evento de qualquer dispositivo com conexão com a internet.",
   },
   {
     title: "Vou ter suporte para dúvidas?",
@@ -88,10 +88,10 @@ export const faqData = [
   },
   {
     title: "Existe um grupo de apoio?",
-    content: "Sim. Ao adquirir o treinamento, você terá livre acesso ao nosso grupo do Whatsapp.",
+    content: "Sim. Ao adquirir o evento, você terá livre acesso ao nosso grupo do Whatsapp.",
   },
   {
     title: "Posso pedir reembolso?",
-    content: "Sim. Caso você não goste do treinamento por qualquer motivo, você tem 7 dias úteis para pedir reembolso.",
+    content: "Sim. Caso você não goste do evento por qualquer motivo, você tem 7 dias úteis para pedir reembolso.",
   },
 ];

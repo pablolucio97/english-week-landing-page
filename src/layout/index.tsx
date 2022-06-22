@@ -85,23 +85,26 @@ export default function Layout({ children }: LayoutProps) {
                         toggleDrawer={handleToggleDrawer}
                         direction='top'
                         style={{
-                            backgroundColor: theme.colors.black100
+                            backgroundColor: theme.colors.primary
                         }}
                     >
                         <HeaderLink
-                            content='Sobre o treinamento'
+                            content='Sobre o evento'
                             url='/#metrics'
                             onClick={handleToggleDrawer}
+                            className='drawerLink'
                         />
                         <HeaderLink
-                            content='O que dizem sobre o treinamento'
+                            content='O que esperar do evento'
                             url='/#testimonials'
                             onClick={handleToggleDrawer}
+                            className='drawerLink'
                         />
                         <HeaderLink
-                            content='Quero queimar gordura'
+                            content='Quero ser fluente'
                             url='/#purchase'
                             onClick={handleToggleDrawer}
+                            className='drawerLink'
                         />
                     </Drawer>
                 }
@@ -110,7 +113,7 @@ export default function Layout({ children }: LayoutProps) {
                 />
                 <HeaderLogoContainer>
                     <Logo
-                        imageUrl='/logo.png'
+                        imageUrl='/logo.svg'
                         size={headerAnimation ? 'small' : 'medium'}
                     />
                 </HeaderLogoContainer>
@@ -120,37 +123,34 @@ export default function Layout({ children }: LayoutProps) {
                         url='/'
                     />
                     <HeaderLink
-                        content='Sobre o treinamento'
+                        content='Sobre o evento'
                         url='/'
                     />
                 </HeaderLinksContainer>
                 <HeaderAuthenticationContainer>
                     <PrimaryButton
-                        title='Quero queimar gordura'
+                        title='Quero ser fluente'
                         size='large'
                         onClick={() => { }}
                         style={{
-                            backgroundColor: theme.colors.primary
+                            backgroundColor: theme.colors.secondary,
+                            color: theme.colors.white100,
                         }}
                     />
                 </HeaderAuthenticationContainer>
             </Header>
             <main>{children}</main>
-            <Footer
-                style={{
-                    backgroundColor: theme.colors.black100
-                }}
-            >
+            <Footer>
                 <FooterFirstSection>
                     <FooterTitle
-                        content='O treinamento'
+                        content='O evento'
                     />
                     <FooterLink
-                        content='Sobre o treinamento'
+                        content='Sobre o evento'
                         url='/#metrics'
                     />
                     <FooterLink
-                        content='O que dizem sobre o treinamento'
+                        content='O que esperar do evento'
                         url='/#testimonials'
                     />
                 </FooterFirstSection>
@@ -163,17 +163,20 @@ export default function Layout({ children }: LayoutProps) {
                         githubUrl='https://github.com/pablolucio97'
                         instagramUrl='https://www.instagram.com/pablosilva.dev'
                         iconsSize='small'
+                        iconsStyle={{
+                            color: theme.colors.secondary_light
+                        }}
                     />
                 </FooterSecondSection>
             </Footer>
             <FooterAttach
                 style={{
-                    backgroundColor: theme.colors.black100,
+                    backgroundColor: theme.colors.primary,
                 }}
             >
                 <Divider />
                 <Text
-                    content='PabloSilvaDev - © Copyright  2022'
+                    content='PabloSilvaDev © -  2022'
                     style={{
                         color: theme.colors.white100,
                         fontSize: theme.sizes.small
