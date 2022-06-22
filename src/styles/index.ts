@@ -158,7 +158,7 @@ export const ForWhomSectionContentContainer = styled.div`
   flex-direction: column;
   align-items: center;
   justify-content: space-evenly;
-  width: 64%;
+  width: 100%;
   padding: 40px;
   
   & p {
@@ -172,21 +172,21 @@ export const ForWhomSectionContentContainer = styled.div`
     margin: 24px 12px;
     color: ${({ theme }) => theme.colors.white100};
     @media (max-width: 1440px) {
-      width: 88%;
       text-align: center;
+      margin: 24px auto;
     }
   }
   @media (max-width: 1080px) {
-    width: 100%;
     margin: 0 auto;
-    padding: 24px;
   }
+
 `;
 export const ForWhomSectionImageContainer = styled.div`
   display: flex;
   justify-content: center;
   align-items: center;
   width: 36%;
+  margin: 0 auto 40px;
   & img {
     filter: drop-shadow(2px 4px 4px black);
     margin-bottom: -80px;

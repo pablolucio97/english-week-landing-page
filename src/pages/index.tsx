@@ -6,8 +6,37 @@ import { Title } from '../components/Typography/Title'
 import { Text } from '../components/Typography/Text'
 import { BannerSection, BannerSectionContainer, Container, ForWhomListContainer, ForWhomListItemContainer, ForWhomSection, ForWhomSectionContainer, ForWhomSectionContentContainer, ForWhomSectionImageContainer, IntroductionSection, IntroductionSectionContainer, IntroductionSectionContentContainer, IntroductionSectionImageContainer, SubscribeSectionContainer, SubscribeSection, TimerContainer, TimerItemContainer, TimerNumberContainer } from '../styles'
 import { MdAirplanemodeActive, MdBook, MdOutlineEmojiEvents, MdOutlineTravelExplore, MdWork } from 'react-icons/md'
+import { useEffect, useState } from 'react'
 
 const Home: NextPage = () => {
+
+  let [seconds, setSeconds] = useState(59)
+  let [minutes, setMinutes] = useState(59)
+  let [hours, setHours] = useState(23)
+
+  useEffect(() => {
+    let myInterval = setInterval(() => {
+      if (seconds > 0) {
+        setSeconds(seconds - 1);
+      }
+      if (seconds === 0) {
+        if (minutes === 0) {
+          if (hours === 0) {
+            clearInterval(myInterval)
+          } else {
+            setHours(hours - 1);
+            setMinutes(59);
+          }
+        } else {
+          setMinutes(minutes - 1);
+          setSeconds(59);
+        }
+      }
+    }, 100)
+    return () => {
+      clearInterval(myInterval);
+    };
+  });
 
   return (
     <Container>
@@ -115,7 +144,7 @@ const Home: NextPage = () => {
               <TimerNumberContainer>
 
                 <Title
-                  content='12'
+                  content='03'
                 />
               </TimerNumberContainer>
               <Text
@@ -126,7 +155,9 @@ const Home: NextPage = () => {
               <TimerNumberContainer>
 
                 <Title
-                  content='07'
+                  content={hours < 10 ?
+                    String('0' + hours) :
+                    String(hours)}
                 />
               </TimerNumberContainer>
               <Text
@@ -137,7 +168,9 @@ const Home: NextPage = () => {
               <TimerNumberContainer>
 
                 <Title
-                  content='45'
+                  content={minutes < 10 ?
+                    String('0' + minutes) :
+                    String(minutes)}
                 />
               </TimerNumberContainer>
               <Text
@@ -148,7 +181,9 @@ const Home: NextPage = () => {
               <TimerNumberContainer>
 
                 <Title
-                  content='59'
+                  content={seconds < 10 ?
+                    String('0' + seconds) :
+                    String(seconds)}
                 />
               </TimerNumberContainer>
               <Text
@@ -161,11 +196,11 @@ const Home: NextPage = () => {
           <Text
             content='para o evento começar'
           />
-        <PrimaryButton
-          title='Garantir minha vaga'
-          onClick={() => { }}
-          size='large'
-        />
+          <PrimaryButton
+            title='Garantir minha vaga'
+            onClick={() => { }}
+            size='large'
+          />
         </SubscribeSectionContainer>
       </SubscribeSection>
     </Container>
