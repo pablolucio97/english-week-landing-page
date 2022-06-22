@@ -9,7 +9,7 @@ export const Container = styled.div`
     position: fixed;
     background-color: ${({ theme }) => theme.colors.primary};
     z-index: 999;
-    padding: 0 12px;
+    padding: 32px;
     transition: all 0.8s ease;
   }
   & .headerNotScrolling {
