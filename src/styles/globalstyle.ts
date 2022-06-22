@@ -103,6 +103,7 @@ export const GlobalStyle = createGlobalStyle`
 
   .headerNotScrolling {
     background-color: transparent;
+    height: 88px;
   }
 
   .animatedTopScroll {
@@ -118,6 +119,11 @@ export const GlobalStyle = createGlobalStyle`
     width: 48px;
     height: 48px;
     color: ${({ theme }) => theme.colors.secondary};
+  }
+
+  .headerLink{
+    font-size: ${({ theme }) => theme.sizes.medium};
+    margin: 0 12px;
   }
 
 

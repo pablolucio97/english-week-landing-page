@@ -90,13 +90,13 @@ export default function Layout({ children }: LayoutProps) {
                     >
                         <HeaderLink
                             content='Sobre o evento'
-                            url='/#metrics'
+                            url='/#introduction'
                             onClick={handleToggleDrawer}
                             className='drawerLink'
                         />
                         <HeaderLink
-                            content='O que esperar do evento'
-                            url='/#testimonials'
+                            content='Para quem é o English Week'
+                            url='/#forwhom'
                             onClick={handleToggleDrawer}
                             className='drawerLink'
                         />
@@ -121,10 +121,12 @@ export default function Layout({ children }: LayoutProps) {
                     <HeaderLink
                         content='Sobre nós'
                         url='/'
+                        className='headerLink'
                     />
                     <HeaderLink
-                        content='Sobre o evento'
-                        url='/'
+                        content='Para quem é o English Week'
+                        url='/#forwhom'
+                        className='headerLink'
                     />
                 </HeaderLinksContainer>
                 <HeaderAuthenticationContainer>
@@ -147,11 +149,11 @@ export default function Layout({ children }: LayoutProps) {
                     />
                     <FooterLink
                         content='Sobre o evento'
-                        url='/#metrics'
+                        url='/#introduction'
                     />
                     <FooterLink
-                        content='O que esperar do evento'
-                        url='/#testimonials'
+                        content='Para quem é o English Week'
+                        url='/#forwhom'
                     />
                 </FooterFirstSection>
                 <FooterSecondSection>

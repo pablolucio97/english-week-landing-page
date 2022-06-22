@@ -7,6 +7,8 @@ import { Text } from '../components/Typography/Text'
 import { BannerSection, BannerSectionContainer, Container, ForWhomListContainer, ForWhomListItemContainer, ForWhomSection, ForWhomSectionContainer, ForWhomSectionContentContainer, ForWhomSectionImageContainer, IntroductionSection, IntroductionSectionContainer, IntroductionSectionContentContainer, IntroductionSectionImageContainer, SubscribeSectionContainer, SubscribeSection, TimerContainer, TimerItemContainer, TimerNumberContainer } from '../styles'
 import { MdAirplanemodeActive, MdBook, MdOutlineEmojiEvents, MdOutlineTravelExplore, MdWork } from 'react-icons/md'
 import { useEffect, useState } from 'react'
+import { RevealFade } from '../components/Animations/RevealFade'
+import { RevealZoom } from '../components/Animations/RevealZoom'
 
 const Home: NextPage = () => {
 
@@ -32,7 +34,7 @@ const Home: NextPage = () => {
           setSeconds(59);
         }
       }
-    }, 100)
+    }, 1000)
     return () => {
       clearInterval(myInterval);
     };
@@ -45,90 +47,108 @@ const Home: NextPage = () => {
           <Title
             content='Está cansado de tentar aprender inglês e nunca ter progresso?'
           />
-          <SubTitle
-            content=' Garanta sua vaga no English Week.'
-          />
-          <PrimaryButton
-            title='Garantir minha vaga'
-            onClick={() => { }}
-            size='large'
-          />
+          <RevealFade bottom>
+            <SubTitle
+              content=' Garanta sua vaga no English Week.'
+            />
+          </RevealFade>
+          <RevealFade bottom>
+            <PrimaryButton
+              title='Garantir minha vaga'
+              onClick={() => { }}
+              size='large'
+            />
+          </RevealFade>
         </BannerSectionContainer>
       </BannerSection>
       <IntroductionSection id='introduction'>
         <IntroductionSectionContainer>
           <IntroductionSectionContentContainer>
-            <Title
-              content='O que será o Enlgish Week?'
-            />
-            <Text
-              content='O Enlgish Week será um dos mariores eventos gratuitos de ensino da língua inglesa. Aqui você irá realmente aprender inglês de uma vez por todas.'
-            />
-            <Text
-              content='O evento ocorrerá entre os dias 04 e 08 de julho contando com muito conteúdo de alta qualidade e totalmente gratuito.'
-            />
-            <Text
-              content='Um jeito fácil de ensinar para destravar de uma vez por todas seu aprendizado em inglês. Vamos juntos dar um passo em direção à sua fluência!'
-            />
+            <RevealFade>
+              <Title
+                content='O que será o Enlgish Week?'
+              />
+            </RevealFade>
+
+            <RevealFade left>
+              <Text
+                content='O Enlgish Week será um dos mariores eventos gratuitos de ensino da língua inglesa. Aqui você irá realmente aprender inglês de uma vez por todas.'
+              />
+            </RevealFade>
+            <RevealFade right>
+              <Text
+                content='O evento ocorrerá entre os dias 04 e 08 de julho contando com muito conteúdo de alta qualidade e totalmente gratuito.'
+              />
+            </RevealFade>
+            <RevealFade left>
+              <Text
+                content='Um jeito fácil de ensinar para destravar de uma vez por todas seu aprendizado em inglês. Vamos juntos dar um passo em direção à sua fluência!'
+              />
+            </RevealFade>
           </IntroductionSectionContentContainer>
           <IntroductionSectionImageContainer>
-            <NextImage
-              height={480}
-              width={320}
-              imgUrl='/statue.png'
-            />
+            <RevealZoom>
+              <NextImage
+                height={480}
+                width={320}
+                imgUrl='/statue.png'
+              />
+            </RevealZoom>
           </IntroductionSectionImageContainer>
         </IntroductionSectionContainer>
       </IntroductionSection>
       <ForWhomSection id='forwhom'>
         <ForWhomSectionContainer>
           <ForWhomSectionImageContainer>
-            <NextImage
-              height={400}
-              width={560}
-              imgUrl='/flag.png'
-            />
+            <RevealZoom>
+              <NextImage
+                height={400}
+                width={560}
+                imgUrl='/flag.png'
+              />
+            </RevealZoom>
           </ForWhomSectionImageContainer>
           <ForWhomSectionContentContainer>
             <Title
               content='Para quem é o English Week?'
             />
-            <ForWhomListContainer>
-              <ForWhomListItemContainer>
-                <MdOutlineEmojiEvents
-                  className='forWhoListIcon'
-                />
-                <Text
-                  content='Para quem já tentou 43587 maneiras de aprender inglês sem sucesso e deseja finalmente aprender inglês.'
-                />
-              </ForWhomListItemContainer>
-              <ForWhomListItemContainer>
-                <MdBook
-                  className='forWhoListIcon'
-                />
-                <Text
-                  content='Para quem tem interesse em aprender um novo idioma.'
-                />
-              </ForWhomListItemContainer>
-              <ForWhomListItemContainer>
-                <MdWork
-                  className='forWhoListIcon'
-                />
-                <Text
-                  content='Para quem precisa do inglês para trabalhar. Se você deseja novas oportunidades, o English Week é para você!'
-                />
-              </ForWhomListItemContainer>
-              <ForWhomListItemContainer>
-                <MdAirplanemodeActive
-                  className='forWhoListIcon'
-                />
-                <Text
-                  content='Para quem deseja viajar e conhecer o mundo.'
-                />
-              </ForWhomListItemContainer>
-            </ForWhomListContainer>
+            <RevealFade>
+              <ForWhomListContainer>
+                <ForWhomListItemContainer>
+                  <MdOutlineEmojiEvents
+                    className='forWhoListIcon'
+                  />
+                  <Text
+                    content='Para quem já tentou 43587 maneiras de aprender inglês sem sucesso e deseja finalmente aprender inglês.'
+                  />
+                </ForWhomListItemContainer>
+                <ForWhomListItemContainer>
+                  <MdBook
+                    className='forWhoListIcon'
+                  />
+                  <Text
+                    content='Para quem tem interesse em aprender um novo idioma.'
+                  />
+                </ForWhomListItemContainer>
+                <ForWhomListItemContainer>
+                  <MdWork
+                    className='forWhoListIcon'
+                  />
+                  <Text
+                    content='Para quem precisa do inglês para trabalhar. Se você deseja novas oportunidades, o English Week é para você!'
+                  />
+                </ForWhomListItemContainer>
+                <ForWhomListItemContainer>
+                  <MdAirplanemodeActive
+                    className='forWhoListIcon'
+                  />
+                  <Text
+                    content='Para quem deseja viajar e conhecer o mundo.'
+                  />
+                </ForWhomListItemContainer>
+              </ForWhomListContainer>
+            </RevealFade>
           </ForWhomSectionContentContainer>
-
         </ForWhomSectionContainer>
       </ForWhomSection>
       <SubscribeSection id='subscribe'>
@@ -196,11 +216,13 @@ const Home: NextPage = () => {
           <Text
             content='para o evento começar'
           />
+          <RevealFade bottom>
           <PrimaryButton
             title='Garantir minha vaga'
             onClick={() => { }}
             size='large'
           />
+          </RevealFade>
         </SubscribeSectionContainer>
       </SubscribeSection>
     </Container>

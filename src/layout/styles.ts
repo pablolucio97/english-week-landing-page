@@ -15,7 +15,6 @@ export const Container = styled.div`
   & .headerNotScrolling {
     background: transparent;
     transition: all 0.8s ease;
-    padding: 8px 12px;
   }
   & .animatedTopScroll {
     right: 24px;

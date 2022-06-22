@@ -189,11 +189,8 @@ export const ForWhomSectionImageContainer = styled.div`
   margin: 0 auto 40px;
   & img {
     filter: drop-shadow(2px 4px 4px black);
-    margin-bottom: -80px;
   }
-  @media (max-width: 1080px) {
-    width: 100%;
-  }
+
 `;
 
 export const ForWhomListContainer = styled.div`
