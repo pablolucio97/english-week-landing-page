@@ -9,6 +9,7 @@ import { MdAirplanemodeActive, MdBook, MdOutlineEmojiEvents, MdOutlineTravelExpl
 import { useEffect, useState } from 'react'
 import { RevealFade } from '../components/Animations/RevealFade'
 import { RevealZoom } from '../components/Animations/RevealZoom'
+import Head from 'next/head'
 
 const Home: NextPage = () => {
 
@@ -42,6 +43,14 @@ const Home: NextPage = () => {
 
   return (
     <Container>
+      <Head>
+        <title>English Week | PabloSilvaDev</title>
+        {/* @ts-ignore */}
+        <meta charset="UTF-8" />
+        <meta name="description" content="Landing pages de alta conversão" />
+        <meta name="keywords" content="pablosilvadev pablo silva psd landing pages " />
+        <meta name='author' content='Pablo Silva' />
+      </Head>
       <BannerSection id='banner'>
         <BannerSectionContainer>
           <Title
@@ -217,11 +226,11 @@ const Home: NextPage = () => {
             content='para o evento começar'
           />
           <RevealFade bottom>
-          <PrimaryButton
-            title='Garantir minha vaga'
-            onClick={() => { }}
-            size='large'
-          />
+            <PrimaryButton
+              title='Garantir minha vaga'
+              onClick={() => { }}
+              size='large'
+            />
           </RevealFade>
         </SubscribeSectionContainer>
       </SubscribeSection>
