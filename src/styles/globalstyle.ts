@@ -114,4 +114,5 @@ export const GlobalStyle = createGlobalStyle`
     transition: all 0.3s ease;
   }
 
+
 `;
