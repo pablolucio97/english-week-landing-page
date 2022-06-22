@@ -4,7 +4,7 @@ import { NextImage } from '../components/Next/NextImage'
 import { SubTitle } from '../components/Typography/SubTitle'
 import { Title } from '../components/Typography/Title'
 import { Text } from '../components/Typography/Text'
-import { BannerSection, BannerSectionContainer, Container, ForWhomListContainer, ForWhomListItemContainer, ForWhomSection, ForWhomSectionContainer, ForWhomSectionContentContainer, ForWhomSectionImageContainer, IntroductionSection, IntroductionSectionContainer, IntroductionSectionContentContainer, IntroductionSectionImageContainer } from '../styles'
+import { BannerSection, BannerSectionContainer, Container, ForWhomListContainer, ForWhomListItemContainer, ForWhomSection, ForWhomSectionContainer, ForWhomSectionContentContainer, ForWhomSectionImageContainer, IntroductionSection, IntroductionSectionContainer, IntroductionSectionContentContainer, IntroductionSectionImageContainer, SubscribeSectionContainer, SubscribeSection, TimerContainer, TimerItemContainer, TimerNumberContainer } from '../styles'
 import { MdAirplanemodeActive, MdBook, MdOutlineEmojiEvents, MdOutlineTravelExplore, MdWork } from 'react-icons/md'
 
 const Home: NextPage = () => {
@@ -66,7 +66,7 @@ const Home: NextPage = () => {
             />
             <ForWhomListContainer>
               <ForWhomListItemContainer>
-              <MdOutlineEmojiEvents
+                <MdOutlineEmojiEvents
                   className='forWhoListIcon'
                 />
                 <Text
@@ -82,7 +82,7 @@ const Home: NextPage = () => {
                 />
               </ForWhomListItemContainer>
               <ForWhomListItemContainer>
-                 <MdWork
+                <MdWork
                   className='forWhoListIcon'
                 />
                 <Text
@@ -90,7 +90,7 @@ const Home: NextPage = () => {
                 />
               </ForWhomListItemContainer>
               <ForWhomListItemContainer>
-                 <MdAirplanemodeActive
+                <MdAirplanemodeActive
                   className='forWhoListIcon'
                 />
                 <Text
@@ -102,6 +102,72 @@ const Home: NextPage = () => {
 
         </ForWhomSectionContainer>
       </ForWhomSection>
+      <SubscribeSection id='subscribe'>
+        <SubscribeSectionContainer>
+          <Title
+            content='Increva-se agora mesmo e garanta sua vaga!'
+          />
+          <Text
+            content='Faltam apenas'
+          />
+          <TimerContainer>
+            <TimerItemContainer>
+              <TimerNumberContainer>
+
+                <Title
+                  content='12'
+                />
+              </TimerNumberContainer>
+              <Text
+                content='dias'
+              />
+            </TimerItemContainer>
+            <TimerItemContainer>
+              <TimerNumberContainer>
+
+                <Title
+                  content='07'
+                />
+              </TimerNumberContainer>
+              <Text
+                content='horas'
+              />
+            </TimerItemContainer>
+            <TimerItemContainer>
+              <TimerNumberContainer>
+
+                <Title
+                  content='45'
+                />
+              </TimerNumberContainer>
+              <Text
+                content='minutos'
+              />
+            </TimerItemContainer>
+            <TimerItemContainer>
+              <TimerNumberContainer>
+
+                <Title
+                  content='59'
+                />
+              </TimerNumberContainer>
+              <Text
+                content='segundos'
+              />
+            </TimerItemContainer>
+
+
+          </TimerContainer>
+          <Text
+            content='para o evento começar'
+          />
+        <PrimaryButton
+          title='Garantir minha vaga'
+          onClick={() => { }}
+          size='large'
+        />
+        </SubscribeSectionContainer>
+      </SubscribeSection>
     </Container>
   )
 }
