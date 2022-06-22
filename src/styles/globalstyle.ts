@@ -114,5 +114,11 @@ export const GlobalStyle = createGlobalStyle`
     transition: all 0.3s ease;
   }
 
+  .forWhoListIcon{
+    width: 48px;
+    height: 48px;
+    color: ${({ theme }) => theme.colors.secondary};
+  }
+
 
 `;

@@ -62,7 +62,6 @@ export const BannerSectionContainer = styled.div`
     color: ${({ theme }) => theme.colors.white100};
     box-shadow: 0 0 160px 1px ${({ theme }) => theme.colors.background_primary};
   }
-
 `;
 
 export const IntroductionSection = styled.section`
@@ -78,7 +77,7 @@ export const IntroductionSectionContainer = styled.div`
   justify-content: center;
   width: 1900px;
   margin: 0 auto;
-  @media(max-width: 1080px){
+  @media (max-width: 1080px) {
     flex-direction: column;
   }
 `;
@@ -94,13 +93,15 @@ export const IntroductionSectionContentContainer = styled.div`
   & p {
     margin: 24px auto;
     width: 56%;
-    @media(max-width: 1440px){
-    width: 80%;;
+    @media (max-width: 1440px) {
+      width: 80%;
+    }
   }
-
+  @media (max-width: 1080px) {
+    width: 100%;
   }
-  @media(max-width: 1080px){
-    width: 100%;;
+  @media (max-width: 720px) {
+    padding: 0
   }
 `;
 export const IntroductionSectionImageContainer = styled.div`
@@ -112,28 +113,112 @@ export const IntroductionSectionImageContainer = styled.div`
     filter: drop-shadow(4px 4px 4px black);
     margin-bottom: -80px;
   }
-  @media(max-width: 1080px){
-    width: 100%;;
+  @media (max-width: 1080px) {
+    width: 100%;
   }
-`;
+  `;
 
-export const MetricsSection = styled.section`
+export const ForWhomSection = styled.section`
   display: flex;
-`;
+  width: 100%;
+  background-color: ${({ theme }) => theme.colors.primary_light};
+  
+  background: -webkit-linear-gradient(-27deg, rgb(70, 88, 245), rgb(245, 70, 79));
+  background: linear-gradient(-27deg, rgb(70, 88, 245), rgb(245, 70, 79));
+
+  min-height: 80vh;
+  padding: 40px;
+  @media (max-width: 720px) {
+    padding: 0
+  }
+  `;
+
+export const ForWhomSectionContainer = styled.div`
+  display: flex;
+  justify-content: center;
+  width: 1900px;
+  margin: 0 auto;
+  @media (max-width: 1080px) {
+    flex-direction: column-reverse;
+  }
+  `;
+
+export const ForWhomSectionContentContainer = styled.div`
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-evenly;
+  width: 64%;
+  padding: 40px;
+  
+  & p {
+    margin: 24px 12px;
+    color: ${({ theme }) => theme.colors.primary};
+    @media (max-width: 1440px) {
+      width: 80%;
+    }
+  }
+  & h1 {
+    margin: 24px 12px;
+    color: ${({ theme }) => theme.colors.white100};
+    @media (max-width: 1440px) {
+      width: 88%;
+      text-align: center;
+    }
+  }
+  @media (max-width: 1080px) {
+    width: 100%;
+    margin: 0 auto;
+  }
+  `;
+export const ForWhomSectionImageContainer = styled.div`
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 36%;
+  & img {
+    filter: drop-shadow(2px 4px 4px black);
+    margin-bottom: -80px;
+  }
+  @media (max-width: 1080px) {
+    width: 100%;
+  }
+  `;
+
+export const ForWhomListContainer = styled.div`
+  display: flex;
+  width: 100%;
+  flex-direction: column;
+  background-color: ${({ theme }) => theme.colors.white100};
+  border-radius: 4px;
+ 
+  `;
+
+export const ForWhomListItemContainer = styled.div`
+  display: flex;
+  align-items: center;
+  width: 100%;
+  padding: 16px;
+  margin: 8px auto;
+  justify-content: center;
+  @media (max-width: 720px) {
+    flex-direction: column;
+  }
+  
+  & p{
+    text-align: center;
+  }
+  `;
 
 export const TestimonialsSection = styled.section`
   display: flex;
-`;
+  `;
 
 export const FaqSection = styled.section`
   display: flex;
-`;
+  `;
 
 export const PurchaseSection = styled.section`
-  display: flex;
-`;
-
-export const MetricsSectionContainer = styled.div`
   display: flex;
 `;
 

@@ -101,7 +101,7 @@ export default function Layout({ children }: LayoutProps) {
                             className='drawerLink'
                         />
                         <HeaderLink
-                            content='Quero ser fluente'
+                            content='Garantir minha vaga'
                             url='/#purchase'
                             onClick={handleToggleDrawer}
                             className='drawerLink'
@@ -129,7 +129,7 @@ export default function Layout({ children }: LayoutProps) {
                 </HeaderLinksContainer>
                 <HeaderAuthenticationContainer>
                     <PrimaryButton
-                        title='Quero ser fluente'
+                        title='Garantir minha vaga'
                         size='large'
                         onClick={() => { }}
                         style={{
