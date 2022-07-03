@@ -1,15 +1,42 @@
+import { useEffect, useState } from 'react'
 import type { NextPage } from 'next'
+import Head from 'next/head'
+import {
+  MdAirplanemodeActive,
+  MdBook,
+  MdOutlineEmojiEvents,
+  MdWork
+ } from 'react-icons/md'
+
+import {
+  BannerSection,
+  BannerSectionContainer,
+  Container,
+  ForWhomListContainer,
+  ForWhomListItemContainer,
+  ForWhomSection,
+  ForWhomSectionContainer,
+  ForWhomSectionContentContainer,
+  ForWhomSectionImageContainer,
+  IntroductionSection,
+  IntroductionSectionContainer,
+  IntroductionSectionContentContainer,
+  IntroductionSectionImageContainer,
+  SubscribeSectionContainer,
+  SubscribeSection,
+  TimerContainer,
+  TimerItemContainer,
+  TimerNumberContainer
+} from '../styles'
+
+import { RevealFade } from '../components/Animations/RevealFade'
+import { RevealZoom } from '../components/Animations/RevealZoom'
 import { PrimaryButton } from '../components/Elements/PrimaryButton'
 import { NextImage } from '../components/Next/NextImage'
 import { SubTitle } from '../components/Typography/SubTitle'
 import { Title } from '../components/Typography/Title'
 import { Text } from '../components/Typography/Text'
-import { BannerSection, BannerSectionContainer, Container, ForWhomListContainer, ForWhomListItemContainer, ForWhomSection, ForWhomSectionContainer, ForWhomSectionContentContainer, ForWhomSectionImageContainer, IntroductionSection, IntroductionSectionContainer, IntroductionSectionContentContainer, IntroductionSectionImageContainer, SubscribeSectionContainer, SubscribeSection, TimerContainer, TimerItemContainer, TimerNumberContainer } from '../styles'
-import { MdAirplanemodeActive, MdBook, MdOutlineEmojiEvents, MdOutlineTravelExplore, MdWork } from 'react-icons/md'
-import { useEffect, useState } from 'react'
-import { RevealFade } from '../components/Animations/RevealFade'
-import { RevealZoom } from '../components/Animations/RevealZoom'
-import Head from 'next/head'
+
 
 const Home: NextPage = () => {
 
@@ -79,30 +106,30 @@ const Home: NextPage = () => {
               />
             </RevealFade>
 
-            <RevealFade left>
+            <RevealFade>
               <Text
                 content='O Enlgish Week será um dos mariores eventos gratuitos de ensino da língua inglesa. Aqui você irá realmente aprender inglês de uma vez por todas.'
               />
             </RevealFade>
-            <RevealFade right>
+            <RevealFade>
               <Text
                 content='O evento ocorrerá entre os dias 04 e 08 de julho contando com muito conteúdo de alta qualidade e totalmente gratuito.'
               />
             </RevealFade>
-            <RevealFade left>
+            <RevealFade>
               <Text
                 content='Um jeito fácil de ensinar para destravar de uma vez por todas seu aprendizado em inglês. Vamos juntos dar um passo em direção à sua fluência!'
               />
             </RevealFade>
           </IntroductionSectionContentContainer>
           <IntroductionSectionImageContainer>
-            <RevealFade>
+            <RevealZoom>
               <NextImage
                 height={480}
                 width={320}
                 imgUrl='/statue.png'
               />
-            </RevealFade>
+            </RevealZoom>
           </IntroductionSectionImageContainer>
         </IntroductionSectionContainer>
       </IntroductionSection>
