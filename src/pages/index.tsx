@@ -96,13 +96,13 @@ const Home: NextPage = () => {
             </RevealFade>
           </IntroductionSectionContentContainer>
           <IntroductionSectionImageContainer>
-            <RevealZoom>
+            <RevealFade>
               <NextImage
                 height={480}
                 width={320}
                 imgUrl='/statue.png'
               />
-            </RevealZoom>
+            </RevealFade>
           </IntroductionSectionImageContainer>
         </IntroductionSectionContainer>
       </IntroductionSection>

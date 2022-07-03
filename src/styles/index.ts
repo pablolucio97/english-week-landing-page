@@ -309,19 +309,4 @@ export const TimerNumberContainer = styled.div`
     height: 56px;
   }
 `;
-/* 
-export const FaqSection = styled.section`
-display: flex;
-`;
 
-export const PurchaseSection = styled.section`
-display: flex;
-`;
-
-export const FaqSectionSectionContainer = styled.div`
-display: flex;
-`;
-
-export const PurchaseSectionSectionContainer = styled.div`
-display: flex;
-`; */
